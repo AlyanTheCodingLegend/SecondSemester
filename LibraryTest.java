@@ -106,12 +106,16 @@ public class LibraryTest {
             System.out.println("Book borrowed successfully.");
         } catch (BookNotAvailableException | InvalidInputException e) {
             System.out.println("Error: " + e.getMessage());
+        } finally {
+            System.out.println("Finished transaction.");
         }
 
         try {
             library.borrowBook("1111111111111"); // Trying to borrow a non-existent book
         } catch (BookNotAvailableException | InvalidInputException e) {
             System.out.println("Error: " + e.getMessage());
+        }  finally {
+            System.out.println("Finished transaction.");
         }
     }
 }
