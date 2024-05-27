@@ -41,6 +41,7 @@ public class Main {
 
             // Trying to create a circle with negative radius
             CircleWithException c2 = new CircleWithException(-2); // This should throw an exception
+            System.out.println("Area of c2: " + c2.findArea());
         } catch (IllegalArgumentException e) {
             System.out.println("Exception caught: " + e.getMessage());
         }
